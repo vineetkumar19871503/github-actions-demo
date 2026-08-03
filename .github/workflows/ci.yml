@@ -24,6 +24,9 @@ jobs:
     steps:
       - name: Print message
         run: echo "GitHub Actions is working!"
+      - uses: ./.github/actions/setup
+        with:
+          node-version: 20
 
   test:
     runs-on: ubuntu-latest
